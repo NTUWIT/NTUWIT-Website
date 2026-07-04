@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 
 const EXEC = [
   { role: "Secretary", reports: [] },
+  { role: "Vice President (Academics)", reports: [] },
   {
     role: "Vice President (External)",
     reports: [
@@ -23,7 +24,6 @@ const SUB = [
   "Marketing Subcommittee",
   "Logistics Subcommittee",
   "Business Management Subcommittee",
-  "Tech & Web Subcommittee",
 ];
 
 const PERKS = [
@@ -134,7 +134,7 @@ export default function Recruit() {
             <div className="h-6 w-px bg-ink/30 mx-auto" />
 
             {/* Direct reports row */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2">
               {EXEC.map((e) => (
                 <div key={e.role} className="flex flex-col gap-2">
                   <RoleCard role={e.role} />
