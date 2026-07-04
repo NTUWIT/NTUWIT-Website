@@ -76,11 +76,19 @@ export default function Home() {
                 See Beyond Binary <ArrowUpRight size={16} />
               </Link>
               <Link
-                to="/recruit"
+                to="/recruit#recruitment-form"
                 className="inline-flex items-center gap-2 border border-ink rounded-full px-5 py-3 text-sm font-semibold hover:bg-blush transition-colors"
               >
                 Join the club
               </Link>
+              <a
+                href="https://forms.cloud.microsoft/r/9bnx8G5Hqx"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 border border-ink rounded-full px-5 py-3 text-sm font-semibold hover:bg-blush transition-colors"
+              >
+                Membership Registration
+              </a>
             </div>
 
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg">

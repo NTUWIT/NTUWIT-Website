@@ -115,7 +115,7 @@ export default function SiteLayout() {
           </nav>
 
           <Link
-            to="/recruit"
+            to="/recruit#recruitment-form"
             className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-ink text-background px-4 py-2 text-[11px] font-semibold uppercase hover:bg-primary-deep hover:text-ink transition-colors"
           >
             Join WIT <ArrowUpRight size={14} />
@@ -157,7 +157,7 @@ export default function SiteLayout() {
                     </NavLink>
                   ))}
                   <Link
-                    to="/recruit"
+                    to="/recruit#recruitment-form"
                     onClick={() => setMobileMenuOpen(false)}
                     className="mt-1 px-3 py-2.5 text-sm font-semibold rounded-lg bg-ink text-background text-center transition-colors hover:bg-primary-deep hover:text-ink"
                   >
@@ -268,6 +268,16 @@ function SiteFooter() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://forms.cloud.microsoft/r/9bnx8G5Hqx"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-ink-soft hover:text-ink transition-colors"
+                >
+                  Membership Registration
+                </a>
+              </li>
             </ul>
           </div>
         </div>

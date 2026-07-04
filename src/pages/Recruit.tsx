@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { Instagram, Send, Linkedin, ArrowUpRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { useLocation } from "react-router-dom";
 
 const EXEC = [
   { role: "Secretary", reports: [] },
@@ -46,6 +48,16 @@ const PERKS = [
 ];
 
 export default function Recruit() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash !== "#recruitment-form") return;
+
+    document
+      .getElementById("recruitment-form")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [hash]);
+
   return (
     <>
       <PageHero
@@ -184,22 +196,52 @@ export default function Recruit() {
 
       {/* CTA */}
       <section className="container-wit py-12 md:py-16">
-        <div className="rounded-lg bg-secondary/60 border border-hairline p-6 md:p-8">
+        <div
+          className="rounded-lg bg-secondary/60 border border-hairline p-6 md:p-8"
+          id="recruitment-form"
+        >
           <div className="max-w-2xl">
+            <p className="mono-eyebrow text-ink-soft text-xs mb-2">
+              Recruitment application
+            </p>
             <h2 className="display text-2xl md:text-3xl font-semibold text-ink">
               Ready to build with us?
             </h2>
             <p className="mt-3 text-ink-soft text-sm">
-              Recruitment opens shortly for AY 26/27. Be first in line by
-              joining our Telegram and following our socials.
+              Fill in the form below to apply for AY 26/27.
+            </p>
+          </div>
+
+          <div className="mt-8 overflow-hidden rounded-lg border border-hairline bg-background min-h-[760px] md:min-h-[900px] lg:min-h-[980px]">
+            <iframe
+              className="h-full w-full"
+              src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSujmEZQvx-1NstWfk-jSZrdUME1VU1haN0lYV1ZZNUw0NkNLTzVUSUEwRi4u&embed=true"
+              frameBorder="0"
+              loading="lazy"
+              allowFullScreen
+              title="NTU Women In Tech Recruitment Form AY26/27"
+            />
+          </div>
+
+          <div className="mt-8 rounded-lg border border-hairline bg-background p-5 md:p-6">
+            <p className="mono-eyebrow text-ink-soft text-xs mb-2">
+              Membership registration
+            </p>
+            <h3 className="font-display text-lg md:text-xl font-semibold text-ink">
+              Join our membership list
+            </h3>
+            <p className="mt-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
+              Use this form if you want to join the email blast, receive event
+              updates, and attend future Women in Tech events without applying
+              for the committee.
             </p>
             <a
-              href="https://t.me/ntu_women_in_tech"
+              href="https://forms.cloud.microsoft/r/9bnx8G5Hqx"
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-2 bg-ink text-background rounded-full px-5 py-2.5 text-xs font-semibold hover:bg-primary-deep hover:text-ink transition-colors"
+              className="mt-4 inline-flex items-center gap-2 border border-ink rounded-full px-5 py-2.5 text-xs font-semibold hover:bg-blush transition-colors"
             >
-              Get the recruitment drop →
+              Women In Tech (WIT) Membership Registration Form – Fill in form
             </a>
           </div>
         </div>
