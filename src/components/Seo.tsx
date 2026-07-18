@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const SITE_URL = "https://ntuwit-website.vercel.app";
+const SITE_URL = "https://www.ntuwit.com";
 
 type SeoDetails = {
   title: string;

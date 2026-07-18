@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://ntuwit-website.vercel.app/sitemap.xml
+Sitemap: https://www.ntuwit.com/sitemap.xml
