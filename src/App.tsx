@@ -11,6 +11,7 @@ import BeyondBinary from "./pages/BeyondBinary";
 import Projects from "./pages/Projects";
 import Recruit from "./pages/Recruit";
 import NotFound from "./pages/NotFound.tsx";
+import Seo from "./components/Seo";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Seo />
         <Routes>
           <Route element={<SiteLayout />}>
             <Route path="/" element={<Home />} />
