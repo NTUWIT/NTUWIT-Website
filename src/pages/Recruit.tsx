@@ -28,6 +28,9 @@ const SUB = [
   "Business Management Subcommittee",
 ];
 
+const EXCO_FORM_URL =
+  "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSujmEZQvx-1NstWfk-jSZrdUME1VU1haN0lYV1ZZNUw0NkNLTzVUSUEwRi4u&embed=true";
+
 const PERKS = [
   {
     t: "Mentorship that compounds",
@@ -197,7 +200,7 @@ export default function Recruit() {
       {/* CTA */}
       <section className="container-wit py-12 md:py-16">
         <div
-          className="rounded-lg bg-secondary/60 border border-hairline p-6 md:p-8"
+          className="scroll-mt-24 rounded-lg bg-secondary/60 border border-hairline p-4 sm:p-6 md:p-8"
           id="recruitment-form"
         >
           <div className="max-w-2xl">
@@ -212,16 +215,28 @@ export default function Recruit() {
             </p>
           </div>
 
-          <div className="mt-8 overflow-hidden rounded-lg border border-hairline bg-background min-h-[760px] md:min-h-[900px] lg:min-h-[980px]">
+          <div className="mt-6 overflow-hidden rounded-lg border border-hairline bg-background shadow-soft md:mt-8">
             <iframe
-              className="h-full w-full"
-              src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSujmEZQvx-1NstWfk-jSZrdUME1VU1haN0lYV1ZZNUw0NkNLTzVUSUEwRi4u&embed=true"
+              className="block h-[70svh] min-h-[640px] w-full sm:h-[76svh] sm:min-h-[720px] md:h-[820px] lg:h-[900px]"
+              src={EXCO_FORM_URL}
               frameBorder="0"
               loading="lazy"
               allowFullScreen
               title="NTU Women In Tech Recruitment Form AY26/27"
             />
           </div>
+
+          <p className="mt-3 text-center text-xs text-ink-soft">
+            Having trouble viewing the form?{" "}
+            <a
+              href={EXCO_FORM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 font-semibold text-ink underline decoration-ink/30 underline-offset-4 transition-colors hover:text-primary-deep"
+            >
+              Open it in a new tab <ArrowUpRight size={12} />
+            </a>
+          </p>
 
           <div className="mt-8 rounded-lg border border-hairline bg-background p-5 md:p-6">
             <p className="mono-eyebrow text-ink-soft text-xs mb-2">
